@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "SIPEDIS",
+    "org": "BAPPEDA",
+    "tagline": "Gov Travel System"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "requests": "Requests",
+    "newRequest": "New Request",
+    "approvals": "Approvals",
+    "reports": "Reports",
+    "settings": "Settings",
+    "adminAnalytics": "Admin Analytics",
+    "logout": "Log out",
+    "notifications": "Notifications",
+    "help": "Help",
+    "profile": "Profile"
+  },
+  "pageTitle": {
+    "dashboard": "Dashboard",
+    "requests": "Travel Requests",
+    "newRequest": "New Travel Request",
+    "editRequest": "Edit Travel Request",
+    "approvals": "Approval Center",
+    "reports": "Reporting & Reimbursement",
+    "settings": "Settings",
+    "adminAnalytics": "Admin Analytics",
+    "login": "Sign in",
+    "components": "Component Catalog"
+  },
+  "common": {
+    "loading": "Loading…",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saveDraft": "Save Draft",
+    "submit": "Submit",
+    "next": "Next Step",
+    "back": "Back",
+    "details": "Details",
+    "approve": "Approve",
+    "reject": "Reject",
+    "delete": "Delete",
+    "export": "Export",
+    "search": "Search",
+    "yes": "Yes",
+    "no": "No",
+    "retry": "Retry",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "required": "Required"
+  },
+  "status": {
+    "draft": "Draft",
+    "pending": "Pending",
+    "revision": "Revision",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "completed": "Completed",
+    "active": "Active",
+    "inactive": "Inactive",
+    "unknown": "Unknown"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address.",
+    "min": "Minimum {min} characters."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Unable to reach the server.",
+    "forbidden": "You do not have access to this page.",
+    "unauthenticated": "Your session has expired. Please sign in again."
+  },
+  "auth": {
+    "loginTitle": "Sign in to SIPEDIS",
+    "loginSubtitle": "BAPPEDA Official Travel Management System",
+    "email": "Email",
+    "emailPlaceholder": "name@bappeda.go.id",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "signInButton": "Sign in",
+    "invalidCredentials": "Invalid email or password."
+  },
+  "empty": {
+    "noData": "No data",
+    "noDataDescription": "There is nothing to show yet."
+  },
+  "table": {
+    "empty": "No rows to display.",
+    "loading": "Loading data…"
+  },
+  "dropzone": {
+    "cta": "Click or drag files here",
+    "hint": "PDF, JPG, PNG up to {size}",
+    "tooLarge": "File is too large."
+  },
+  "confirm": {
+    "title": "Confirm",
+    "message": "Are you sure?",
+    "confirmLabel": "Confirm",
+    "cancelLabel": "Cancel"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "SIPEDIS",
+    "org": "BAPPEDA",
+    "tagline": "Gov Travel System"
+  },
+  "nav": {
+    "dashboard": "Beranda",
+    "requests": "Pengajuan",
+    "newRequest": "Pengajuan Baru",
+    "approvals": "Persetujuan",
+    "reports": "Laporan",
+    "settings": "Setelan",
+    "adminAnalytics": "Admin Analytics",
+    "logout": "Keluar",
+    "notifications": "Notifikasi",
+    "help": "Bantuan",
+    "profile": "Profil"
+  },
+  "pageTitle": {
+    "dashboard": "Beranda",
+    "requests": "Daftar Pengajuan",
+    "newRequest": "Pengajuan Perjalanan Baru",
+    "editRequest": "Ubah Pengajuan",
+    "approvals": "Pusat Persetujuan",
+    "reports": "Laporan & Reimbursement",
+    "settings": "Setelan",
+    "adminAnalytics": "Admin Analytics",
+    "login": "Masuk",
+    "components": "Katalog Komponen"
+  },
+  "common": {
+    "loading": "Memuat…",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "saveDraft": "Simpan Draf",
+    "submit": "Kirim",
+    "next": "Selanjutnya",
+    "back": "Kembali",
+    "details": "Detail",
+    "approve": "Setujui",
+    "reject": "Tolak",
+    "delete": "Hapus",
+    "export": "Ekspor",
+    "search": "Cari",
+    "yes": "Ya",
+    "no": "Tidak",
+    "retry": "Coba Lagi",
+    "signIn": "Masuk",
+    "signOut": "Keluar",
+    "required": "Wajib"
+  },
+  "status": {
+    "draft": "Draf",
+    "pending": "Menunggu",
+    "revision": "Revisi",
+    "approved": "Disetujui",
+    "rejected": "Ditolak",
+    "completed": "Selesai",
+    "active": "Aktif",
+    "inactive": "Nonaktif",
+    "unknown": "Tidak diketahui"
+  },
+  "validation": {
+    "required": "Kolom ini wajib diisi.",
+    "email": "Masukkan alamat email yang valid.",
+    "min": "Minimal {min} karakter."
+  },
+  "errors": {
+    "generic": "Terjadi kesalahan. Silakan coba lagi.",
+    "network": "Tidak dapat terhubung ke server.",
+    "forbidden": "Anda tidak memiliki akses ke halaman ini.",
+    "unauthenticated": "Sesi Anda telah berakhir. Silakan masuk kembali."
+  },
+  "auth": {
+    "loginTitle": "Masuk ke SIPEDIS",
+    "loginSubtitle": "Sistem Informasi Perjalanan Dinas BAPPEDA",
+    "email": "Email",
+    "emailPlaceholder": "nama@bappeda.go.id",
+    "password": "Kata Sandi",
+    "passwordPlaceholder": "Masukkan kata sandi",
+    "signInButton": "Masuk",
+    "invalidCredentials": "Email atau kata sandi salah."
+  },
+  "empty": {
+    "noData": "Tidak ada data",
+    "noDataDescription": "Belum ada informasi untuk ditampilkan."
+  },
+  "table": {
+    "empty": "Tidak ada baris untuk ditampilkan.",
+    "loading": "Memuat data…"
+  },
+  "dropzone": {
+    "cta": "Klik atau seret berkas ke sini",
+    "hint": "PDF, JPG, PNG hingga {size}",
+    "tooLarge": "Berkas terlalu besar."
+  },
+  "confirm": {
+    "title": "Konfirmasi",
+    "message": "Apakah Anda yakin?",
+    "confirmLabel": "Konfirmasi",
+    "cancelLabel": "Batal"
+  }
+}
