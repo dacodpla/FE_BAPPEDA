@@ -51,20 +51,19 @@ function keyOf(row, i, rowKey) {
             {{ emptyText || t('table.empty') }}
           </td>
         </tr>
-        <tr v-for="(row, i) in rows" v-else :key="keyOf(row, i, rowKey)">
-          <td
-            v-for="col in columns"
-            :key="col.key"
-            :class="[
-              `align-${col.align || 'left'}`,
-              col.align === 'right' ? 'text-numeric' : '',
-            ]"
-          >
-            <slot :name="`cell-${col.key}`" :row="row" :value="row[col.key]">
-              {{ row[col.key] }}
-            </slot>
-          </td>
-        </tr>
+        <template v-else>
+          <tr v-for="(row, i) in rows" :key="keyOf(row, i, rowKey)">
+            <td
+              v-for="col in columns"
+              :key="col.key"
+              :class="[`align-${col.align || 'left'}`, col.align === 'right' ? 'text-numeric' : '']"
+            >
+              <slot :name="`cell-${col.key}`" :row="row" :value="row[col.key]">
+                {{ row[col.key] }}
+              </slot>
+            </td>
+          </tr>
+        </template>
       </tbody>
     </table>
 
@@ -74,28 +73,25 @@ function keyOf(row, i, rowKey) {
       <div v-else-if="!rows.length" class="mobile-state">
         {{ emptyText || t('table.empty') }}
       </div>
-      <article
-        v-for="(row, i) in rows"
-        v-else
-        :key="keyOf(row, i, rowKey)"
-        class="mobile-card"
-      >
-        <div
-          v-for="col in columns.filter((c) => c.mobile !== 'hidden')"
-          :key="col.key"
-          class="mobile-row"
-          :class="`mobile-${col.mobile || 'meta'}`"
-        >
-          <span v-if="(col.mobile || 'meta') === 'meta'" class="mobile-label">
-            {{ col.label }}
-          </span>
-          <span class="mobile-value" :class="col.align === 'right' ? 'text-numeric' : ''">
-            <slot :name="`cell-${col.key}`" :row="row" :value="row[col.key]">
-              {{ row[col.key] }}
-            </slot>
-          </span>
-        </div>
-      </article>
+      <template v-else>
+        <article v-for="(row, i) in rows" :key="keyOf(row, i, rowKey)" class="mobile-card">
+          <div
+            v-for="col in columns.filter((c) => c.mobile !== 'hidden')"
+            :key="col.key"
+            class="mobile-row"
+            :class="`mobile-${col.mobile || 'meta'}`"
+          >
+            <span v-if="(col.mobile || 'meta') === 'meta'" class="mobile-label">
+              {{ col.label }}
+            </span>
+            <span class="mobile-value" :class="col.align === 'right' ? 'text-numeric' : ''">
+              <slot :name="`cell-${col.key}`" :row="row" :value="row[col.key]">
+                {{ row[col.key] }}
+              </slot>
+            </span>
+          </div>
+        </article>
+      </template>
     </div>
   </div>
 </template>
@@ -129,9 +125,15 @@ function keyOf(row, i, rowKey) {
 .data-table tbody tr + tr td {
   border-top: 1px solid var(--color-border);
 }
-.text-numeric { font-variant-numeric: tabular-nums; }
-.align-right { text-align: right; }
-.align-center { text-align: center; }
+.text-numeric {
+  font-variant-numeric: tabular-nums;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
 
 .state-cell {
   text-align: center;

@@ -91,7 +91,9 @@ function handleFiles(list) {
   text-align: center;
   color: var(--color-text-secondary);
   cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
   display: flex;
   flex-direction: column;
   align-items: center;

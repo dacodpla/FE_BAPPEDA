@@ -15,10 +15,9 @@ const { t } = useI18n()
 const { isMobile } = useBreakpoint()
 
 const mobileLabel = computed(() =>
-  `Langkah ${props.current} dari ${props.steps.length}`,
+  t('steps.stepOf', { current: props.current, total: props.steps.length }),
 )
 const currentStep = computed(() => props.steps[props.current - 1])
-void t
 </script>
 
 <template>
@@ -85,13 +84,17 @@ void t
   color: var(--color-text-inverse);
   border-color: var(--color-brand-navy);
 }
-.step.active .label { color: var(--color-text-primary); }
+.step.active .label {
+  color: var(--color-text-primary);
+}
 .step.done .marker {
   background-color: var(--color-success);
   color: var(--color-text-inverse);
   border-color: var(--color-success);
 }
-.step.done .label { color: var(--color-text-secondary); }
+.step.done .label {
+  color: var(--color-text-secondary);
+}
 
 .mobile {
   display: flex;

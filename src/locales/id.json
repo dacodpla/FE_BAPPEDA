@@ -15,7 +15,8 @@
     "logout": "Keluar",
     "notifications": "Notifikasi",
     "help": "Bantuan",
-    "profile": "Profil"
+    "profile": "Profil",
+    "openMenu": "Buka menu"
   },
   "pageTitle": {
     "dashboard": "Beranda",
@@ -38,9 +39,12 @@
     "next": "Selanjutnya",
     "back": "Kembali",
     "details": "Detail",
+    "edit": "Ubah",
+    "close": "Tutup",
     "approve": "Setujui",
     "reject": "Tolak",
     "delete": "Hapus",
+    "remove": "Hapus",
     "export": "Ekspor",
     "search": "Cari",
     "yes": "Ya",
@@ -48,7 +52,11 @@
     "retry": "Coba Lagi",
     "signIn": "Masuk",
     "signOut": "Keluar",
-    "required": "Wajib"
+    "required": "Wajib",
+    "all": "Semua",
+    "previous": "Sebelumnya",
+    "pageOf": "Halaman {page} dari {pages}",
+    "view": "Lihat"
   },
   "status": {
     "draft": "Draf",
@@ -61,22 +69,39 @@
     "inactive": "Nonaktif",
     "unknown": "Tidak diketahui"
   },
+  "transport": {
+    "PESAWAT": "Pesawat",
+    "MOBIL_DINAS": "Mobil Dinas",
+    "KERETA": "Kereta",
+    "BUS": "Bus"
+  },
   "validation": {
     "required": "Kolom ini wajib diisi.",
     "email": "Masukkan alamat email yang valid.",
-    "min": "Minimal {min} karakter."
+    "min": "Minimal {min} karakter.",
+    "returnBeforeDepart": "Tanggal pulang tidak boleh sebelum tanggal pergi."
   },
   "errors": {
     "generic": "Terjadi kesalahan. Silakan coba lagi.",
     "network": "Tidak dapat terhubung ke server.",
     "forbidden": "Anda tidak memiliki akses ke halaman ini.",
-    "unauthenticated": "Sesi Anda telah berakhir. Silakan masuk kembali."
+    "unauthenticated": "Sesi Anda telah berakhir. Silakan masuk kembali.",
+    "loadFailed": "Data tidak dapat dimuat.",
+    "code": {
+      "BAD_REQUEST": "Permintaan tidak valid.",
+      "FORBIDDEN": "Anda tidak memiliki izin untuk tindakan ini.",
+      "NOT_FOUND": "Data tidak ditemukan.",
+      "INVALID_TRANSITION": "Status pengajuan telah berubah. Data dimuat ulang.",
+      "FILE_TOO_LARGE": "Berkas terlalu besar.",
+      "VALIDATION_ERROR": "Beberapa isian belum valid.",
+      "INTERNAL_ERROR": "Terjadi kesalahan pada server."
+    }
   },
   "auth": {
     "loginTitle": "Masuk ke SIPEDIS",
     "loginSubtitle": "Sistem Informasi Perjalanan Dinas BAPPEDA",
     "email": "Email",
-    "emailPlaceholder": "nama@bappeda.go.id",
+    "emailPlaceholder": "nama{'@'}bappeda.go.id",
     "password": "Kata Sandi",
     "passwordPlaceholder": "Masukkan kata sandi",
     "signInButton": "Masuk",
@@ -100,5 +125,133 @@
     "message": "Apakah Anda yakin?",
     "confirmLabel": "Konfirmasi",
     "cancelLabel": "Batal"
+  },
+  "steps": {
+    "stepOf": "Langkah {current} dari {total}"
+  },
+  "toast": {
+    "dismiss": "Tutup notifikasi"
+  },
+  "settings": {
+    "language": "Bahasa",
+    "languageHint": "Bahasa tampilan aplikasi.",
+    "id": "Bahasa Indonesia",
+    "en": "English"
+  },
+  "dashboard": {
+    "welcome": "Selamat datang kembali, {name}",
+    "subtitle": "Ringkasan perjalanan dinas Anda.",
+    "activeTrips": "Perjalanan Aktif",
+    "activeTripsHint": "Disetujui dan belum selesai",
+    "pendingApprovals": "Menunggu Persetujuan",
+    "pendingHintEmployee": "Pengajuan Anda yang menunggu",
+    "pendingHintApprover": "Antrean seluruh pegawai",
+    "budgetUsed": "Anggaran Terpakai (YTD)",
+    "budgetUsedHint": "dari alokasi {amount}",
+    "upcomingTrips": "Perjalanan Mendatang",
+    "noUpcomingTitle": "Belum ada perjalanan mendatang",
+    "noUpcomingDescription": "Buat pengajuan perjalanan dinas baru untuk memulai.",
+    "cols": {
+      "trip": "Perjalanan",
+      "dates": "Tanggal",
+      "status": "Status"
+    },
+    "quick": {
+      "title": "Aksi Cepat",
+      "newRequest": "Pengajuan Baru",
+      "submitReport": "Kirim Laporan",
+      "viewPolicies": "Lihat Kebijakan"
+    },
+    "budget": {
+      "title": "Anggaran Tahunan",
+      "used": "Terpakai",
+      "remaining": "Sisa",
+      "percent": "{percent}% dari alokasi tahunan"
+    }
+  },
+  "requests": {
+    "subtitle": "Semua pengajuan perjalanan dinas Anda.",
+    "filterStatus": "Status",
+    "cols": {
+      "sppd": "No. SPPD",
+      "destination": "Tujuan",
+      "dates": "Tanggal",
+      "estimate": "Estimasi Biaya",
+      "status": "Status",
+      "actions": "Aksi"
+    },
+    "emptyTitle": "Belum ada pengajuan",
+    "emptyDescription": "Pengajuan yang Anda buat akan muncul di sini.",
+    "notEstimated": "Belum dihitung",
+    "detail": {
+      "title": "Detail Pengajuan",
+      "sppd": "No. SPPD",
+      "employee": "Pegawai",
+      "destination": "Tujuan",
+      "dates": "Tanggal perjalanan",
+      "days": "{count} hari",
+      "purpose": "Tujuan perjalanan",
+      "transport": "Transportasi",
+      "estimate": "Estimasi biaya",
+      "documents": "Dokumen pendukung",
+      "noDocuments": "Belum ada dokumen.",
+      "submittedAt": "Dikirim pada"
+    }
+  },
+  "form": {
+    "steps": {
+      "trip": "Detail Perjalanan",
+      "policy": "Cek Kebijakan",
+      "documents": "Dokumen"
+    },
+    "destination": "Tujuan",
+    "destinationPlaceholder": "Contoh: Jakarta, DKI Jakarta",
+    "departDate": "Tanggal Pergi",
+    "returnDate": "Tanggal Pulang",
+    "purpose": "Tujuan Perjalanan",
+    "purposePlaceholder": "Jelaskan tujuan perjalanan dinas",
+    "transport": "Moda Transportasi Utama",
+    "saved": "Draf tersimpan.",
+    "submitted": "Pengajuan berhasil dikirim.",
+    "cannotEdit": "Pengajuan ini tidak dapat diubah lagi.",
+    "backToList": "Kembali ke daftar pengajuan"
+  },
+  "policy": {
+    "title": "Cek Kebijakan Perjalanan",
+    "subtitle": "Tunjangan dihitung otomatis berdasarkan golongan, tujuan, dan lama perjalanan.",
+    "checking": "Menghitung tunjangan…",
+    "days": "Lama perjalanan",
+    "daysValue": "{days} hari ({nights} malam)",
+    "zone": "Zona tujuan",
+    "zones": {
+      "IN_PROVINCE": "Dalam provinsi",
+      "OUT_PROVINCE": "Luar provinsi"
+    },
+    "rank": "Golongan",
+    "dailyRate": "Uang harian",
+    "lodgingCap": "Batas penginapan per malam",
+    "breakdown": "Rincian estimasi biaya",
+    "allowance": "Uang harian",
+    "lodging": "Penginapan",
+    "transport": "Transportasi",
+    "total": "Total estimasi",
+    "compliant": "Sesuai kebijakan",
+    "nonCompliant": "Tidak sesuai kebijakan",
+    "issues": {
+      "TRIP_TOO_LONG": "Lama perjalanan melebihi batas {max} hari.",
+      "NO_POLICY_FOR_RANK": "Belum ada kebijakan aktif untuk golongan {rank}."
+    },
+    "warnings": {
+      "DESTINATION_NOT_IN_CATALOG": "Tujuan tidak ada dalam katalog, tarif luar provinsi digunakan."
+    },
+    "submitBlocked": "Pengajuan tidak dapat dikirim karena tidak sesuai kebijakan."
+  },
+  "documents": {
+    "title": "Dokumen Pendukung",
+    "hint": "Unggah minimal satu dokumen, misalnya surat tugas atau undangan.",
+    "uploading": "Mengunggah…",
+    "empty": "Belum ada dokumen yang diunggah.",
+    "failed": "Gagal diunggah",
+    "required": "Minimal satu dokumen pendukung diperlukan."
   }
 }

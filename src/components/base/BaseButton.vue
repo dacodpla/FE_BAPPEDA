@@ -67,7 +67,9 @@ const tag = computed(() => {
   border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color var(--transition-fast), color var(--transition-fast),
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
     border-color var(--transition-fast);
   white-space: nowrap;
 }

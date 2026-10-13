@@ -39,13 +39,17 @@ defineEmits(['update:modelValue'])
   resize: vertical;
   min-height: 80px;
 }
-.base-textarea::placeholder { color: var(--color-text-muted); }
+.base-textarea::placeholder {
+  color: var(--color-text-muted);
+}
 .base-textarea:focus {
   border-color: var(--color-active-blue);
   outline: none;
   box-shadow: 0 0 0 3px var(--color-light-blue);
 }
-.base-textarea.invalid { border-color: var(--color-danger); }
+.base-textarea.invalid {
+  border-color: var(--color-danger);
+}
 .base-textarea:disabled {
   background-color: var(--color-surface-alt);
   color: var(--color-text-muted);

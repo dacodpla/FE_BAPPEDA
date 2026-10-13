@@ -59,7 +59,13 @@ defineProps({
   font-size: var(--text-small);
   color: var(--color-text-secondary);
 }
-.trend-up { color: var(--color-success); }
-.trend-down { color: var(--color-danger); }
-.trend-flat { color: var(--color-text-muted); }
+.trend-up {
+  color: var(--color-success);
+}
+.trend-down {
+  color: var(--color-danger);
+}
+.trend-flat {
+  color: var(--color-text-muted);
+}
 </style>

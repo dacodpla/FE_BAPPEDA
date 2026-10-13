@@ -48,7 +48,11 @@ const { t } = useI18n()
   font-weight: var(--font-weight-bold);
   color: var(--color-text-inverse);
 }
-.brand-sub { color: var(--color-text-inverse); opacity: 0.85; max-width: 380px; }
+.brand-sub {
+  color: var(--color-text-inverse);
+  opacity: 0.85;
+  max-width: 380px;
+}
 
 .content {
   display: flex;
@@ -59,7 +63,12 @@ const { t } = useI18n()
 }
 
 @media (max-width: 900px) {
-  .auth-layout { grid-template-columns: 1fr; }
-  .brand-panel { padding: var(--space-6); min-height: 180px; }
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+  .brand-panel {
+    padding: var(--space-6);
+    min-height: 180px;
+  }
 }
 </style>

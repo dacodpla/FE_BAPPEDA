@@ -46,13 +46,17 @@ defineEmits(['update:modelValue'])
   outline: none;
   box-shadow: 0 0 0 3px var(--color-light-blue);
 }
-.base-datepicker.invalid { border-color: var(--color-danger); }
+.base-datepicker.invalid {
+  border-color: var(--color-danger);
+}
 .base-datepicker:disabled {
   background-color: var(--color-surface-alt);
   color: var(--color-text-muted);
   cursor: not-allowed;
 }
 @media (max-width: 767px) {
-  .base-datepicker { height: 44px; }
+  .base-datepicker {
+    height: 44px;
+  }
 }
 </style>

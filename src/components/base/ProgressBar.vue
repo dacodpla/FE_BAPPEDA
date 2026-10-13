@@ -44,8 +44,16 @@ const percent = computed(() => {
   border-radius: var(--radius-pill);
   transition: width var(--transition-base);
 }
-.tone-brand { background-color: var(--color-brand-navy); }
-.tone-success { background-color: var(--color-success); }
-.tone-warning { background-color: var(--color-warning); }
-.tone-danger { background-color: var(--color-danger); }
+.tone-brand {
+  background-color: var(--color-brand-navy);
+}
+.tone-success {
+  background-color: var(--color-success);
+}
+.tone-warning {
+  background-color: var(--color-warning);
+}
+.tone-danger {
+  background-color: var(--color-danger);
+}
 </style>

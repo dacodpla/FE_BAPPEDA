@@ -44,7 +44,7 @@ watch(
   async (v) => {
     if (v) {
       await nextTick()
-      confirmRef.value?.$el?.focus?.() || confirmRef.value?.focus?.()
+      confirmRef.value?.$el?.focus?.()
     }
   },
 )

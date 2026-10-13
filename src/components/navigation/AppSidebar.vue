@@ -110,13 +110,31 @@ async function onLogout() {
   font-weight: var(--font-weight-bold);
   font-size: var(--text-small);
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-size: var(--text-card-title); font-weight: var(--font-weight-bold); color: var(--color-brand-navy); }
-.brand-sub { font-size: var(--text-label); color: var(--color-text-secondary); }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.brand-name {
+  font-size: var(--text-card-title);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-navy);
+}
+.brand-sub {
+  font-size: var(--text-label);
+  color: var(--color-text-secondary);
+}
 
-.cta { width: 100%; }
+.cta {
+  width: 100%;
+}
 
-.nav { display: flex; flex-direction: column; gap: var(--space-1); flex: 1; }
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
 .nav-item {
   display: flex;
   align-items: center;
@@ -127,17 +145,34 @@ async function onLogout() {
   font-size: var(--text-body);
   font-weight: var(--font-weight-medium);
   text-decoration: none;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
   width: 100%;
   text-align: left;
 }
-.sidebar.collapsed .nav-item { justify-content: center; padding: var(--space-3) 0; }
-.nav-item:hover { background-color: var(--color-surface-alt); color: var(--color-text-primary); }
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: var(--space-3) 0;
+}
+.nav-item:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-primary);
+}
 .nav-item.router-link-active {
   background-color: var(--color-light-blue);
   color: var(--color-brand-navy);
 }
-.logout { color: var(--color-text-secondary); background: none; border: none; cursor: pointer; }
+.logout {
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-.footer { border-top: 1px solid var(--color-border); padding-top: var(--space-3); width: 100%; }
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+  width: 100%;
+}
 </style>

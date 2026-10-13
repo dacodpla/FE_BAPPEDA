@@ -11,7 +11,10 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint()
 
 const drawerOpen = ref(false)
 const route = useRoute()
-watch(() => route.fullPath, () => (drawerOpen.value = false))
+watch(
+  () => route.fullPath,
+  () => (drawerOpen.value = false),
+)
 </script>
 
 <template>
@@ -49,9 +52,13 @@ watch(() => route.fullPath, () => (drawerOpen.value = false))
   min-height: 100vh;
   display: flex;
 }
-.app-layout.mobile { flex-direction: column; }
+.app-layout.mobile {
+  flex-direction: column;
+}
 
-.sidebar-slot { flex-shrink: 0; }
+.sidebar-slot {
+  flex-shrink: 0;
+}
 
 .drawer-overlay {
   position: fixed;

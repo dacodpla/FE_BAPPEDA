@@ -65,7 +65,5 @@ export const NAV_ITEMS = [
 ]
 
 export function itemsFor(role, { mobileOnly = false } = {}) {
-  return NAV_ITEMS.filter(
-    (item) => item.roles.includes(role) && (!mobileOnly || item.mobile),
-  )
+  return NAV_ITEMS.filter((item) => item.roles.includes(role) && (!mobileOnly || item.mobile))
 }

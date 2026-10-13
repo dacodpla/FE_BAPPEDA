@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 
 /**
  * Maps API validation errors ({ error: { fields: { field: msg } } }) to a
@@ -35,5 +35,20 @@ export function useFormErrors() {
     errors.value = { ...errors.value, [field]: message }
   }
 
-  return { errors, generalError, setFromApi, clear, set }
+  /**
+   * Focuses the first field (in the order of `ids`) that currently has an
+   * error. `ids` maps field name -> DOM id, e.g. { destination: 'req-destination' }.
+   */
+  const focusFirst = async (ids) => {
+    await nextTick()
+    for (const [field, id] of Object.entries(ids)) {
+      if (errors.value[field]) {
+        document.getElementById(id)?.focus()
+        return field
+      }
+    }
+    return null
+  }
+
+  return { errors, generalError, setFromApi, clear, set, focusFirst }
 }

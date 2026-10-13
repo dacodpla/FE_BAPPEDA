@@ -13,12 +13,7 @@ const items = computed(() => (auth.role ? itemsFor(auth.role, { mobileOnly: true
 
 <template>
   <nav class="bottom-nav" :aria-label="t('nav.dashboard')">
-    <RouterLink
-      v-for="item in items"
-      :key="item.key"
-      :to="item.to"
-      class="item"
-    >
+    <RouterLink v-for="item in items" :key="item.key" :to="item.to" class="item">
       <component :is="item.mobileIcon || item.icon" :size="20" aria-hidden="true" />
       <span class="label">{{ t(item.labelKey) }}</span>
     </RouterLink>
@@ -51,6 +46,10 @@ const items = computed(() => (auth.role ? itemsFor(auth.role, { mobileOnly: true
   text-decoration: none;
   min-height: 44px;
 }
-.item.router-link-active { color: var(--color-brand-navy); }
-.label { font-weight: var(--font-weight-medium); }
+.item.router-link-active {
+  color: var(--color-brand-navy);
+}
+.label {
+  font-weight: var(--font-weight-medium);
+}
 </style>

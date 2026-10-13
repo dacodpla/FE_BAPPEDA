@@ -7,6 +7,7 @@ import BaseCard from '@/components/base/BaseCard.vue'
 import FormField from '@/components/base/FormField.vue'
 import BaseInput from '@/components/base/BaseInput.vue'
 import BaseButton from '@/components/base/BaseButton.vue'
+import AlertBanner from '@/components/base/AlertBanner.vue'
 import { useAuthStore } from '@/stores/auth'
 import { useFormErrors } from '@/composables/useFormErrors'
 
@@ -73,16 +74,11 @@ function focusFirstError() {
         </template>
 
         <form class="stack-4" novalidate @submit.prevent="onSubmit">
-          <div v-if="generalError" class="general-error" role="alert">
+          <AlertBanner v-if="generalError" tone="danger">
             {{ generalError.message || t('errors.generic') }}
-          </div>
+          </AlertBanner>
 
-          <FormField
-            id="login-email"
-            :label="t('auth.email')"
-            :error="errors.email"
-            required
-          >
+          <FormField id="login-email" :label="t('auth.email')" :error="errors.email" required>
             <template #default="{ bindings }">
               <BaseInput
                 ref="emailRef"
@@ -133,14 +129,6 @@ function focusFirstError() {
 }
 .subtitle {
   color: var(--color-text-secondary);
-  font-size: var(--text-small);
-}
-.general-error {
-  padding: var(--space-3);
-  border: 1px solid var(--color-danger);
-  background-color: var(--color-danger-soft);
-  color: var(--color-on-danger-soft);
-  border-radius: var(--radius-input);
   font-size: var(--text-small);
 }
 </style>

@@ -51,7 +51,16 @@ const steps = [
   { key: 'docs', label: 'Documents' },
 ]
 
-const statuses = ['DRAFT', 'PENDING', 'REVISION', 'APPROVED', 'REJECTED', 'COMPLETED', 'ACTIVE', 'INACTIVE']
+const statuses = [
+  'DRAFT',
+  'PENDING',
+  'REVISION',
+  'APPROVED',
+  'REJECTED',
+  'COMPLETED',
+  'ACTIVE',
+  'INACTIVE',
+]
 </script>
 
 <template>
@@ -80,14 +89,30 @@ const statuses = ['DRAFT', 'PENDING', 'REVISION', 'APPROVED', 'REJECTED', 'COMPL
       <BaseCard title="Stat cards">
         <div class="stat-grid">
           <StatCard label="Active Trips" :value="12" hint="+2 this week" trend="up" :icon="Plane" />
-          <StatCard label="Pending Approvals" :value="5" hint="Same as last week" trend="flat" :icon="Bell" />
-          <StatCard label="Budget Used" :value="format(45000000)" hint="of 100.000.000" :icon="LayoutGrid" />
+          <StatCard
+            label="Pending Approvals"
+            :value="5"
+            hint="Same as last week"
+            trend="flat"
+            :icon="Bell"
+          />
+          <StatCard
+            label="Budget Used"
+            :value="format(45000000)"
+            hint="of 100.000.000"
+            :icon="LayoutGrid"
+          />
         </div>
       </BaseCard>
 
       <BaseCard title="Form fields">
         <div class="stack-4">
-          <FormField id="c-text" label="Text input" :error="!form.text ? t('validation.required') : null" required>
+          <FormField
+            id="c-text"
+            label="Text input"
+            :error="!form.text ? t('validation.required') : null"
+            required
+          >
             <template #default="{ bindings }">
               <BaseInput v-model="form.text" placeholder="Type something" v-bind="bindings" />
             </template>
@@ -158,7 +183,11 @@ const statuses = ['DRAFT', 'PENDING', 'REVISION', 'APPROVED', 'REJECTED', 'COMPL
       </BaseCard>
 
       <BaseCard title="Empty state">
-        <EmptyState :icon="Plane" title="No trips yet" description="Create your first travel request to get started.">
+        <EmptyState
+          :icon="Plane"
+          title="No trips yet"
+          description="Create your first travel request to get started."
+        >
           <BaseButton variant="primary">New Request</BaseButton>
         </EmptyState>
       </BaseCard>

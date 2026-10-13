@@ -15,7 +15,8 @@
     "logout": "Log out",
     "notifications": "Notifications",
     "help": "Help",
-    "profile": "Profile"
+    "profile": "Profile",
+    "openMenu": "Open menu"
   },
   "pageTitle": {
     "dashboard": "Dashboard",
@@ -38,9 +39,12 @@
     "next": "Next Step",
     "back": "Back",
     "details": "Details",
+    "edit": "Edit",
+    "close": "Close",
     "approve": "Approve",
     "reject": "Reject",
     "delete": "Delete",
+    "remove": "Remove",
     "export": "Export",
     "search": "Search",
     "yes": "Yes",
@@ -48,7 +52,11 @@
     "retry": "Retry",
     "signIn": "Sign In",
     "signOut": "Sign Out",
-    "required": "Required"
+    "required": "Required",
+    "all": "All",
+    "previous": "Previous",
+    "pageOf": "Page {page} of {pages}",
+    "view": "View"
   },
   "status": {
     "draft": "Draft",
@@ -61,22 +69,39 @@
     "inactive": "Inactive",
     "unknown": "Unknown"
   },
+  "transport": {
+    "PESAWAT": "Flight",
+    "MOBIL_DINAS": "Official Car",
+    "KERETA": "Train",
+    "BUS": "Bus"
+  },
   "validation": {
     "required": "This field is required.",
     "email": "Enter a valid email address.",
-    "min": "Minimum {min} characters."
+    "min": "Minimum {min} characters.",
+    "returnBeforeDepart": "Return date must not be before departure date."
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",
     "network": "Unable to reach the server.",
     "forbidden": "You do not have access to this page.",
-    "unauthenticated": "Your session has expired. Please sign in again."
+    "unauthenticated": "Your session has expired. Please sign in again.",
+    "loadFailed": "Data could not be loaded.",
+    "code": {
+      "BAD_REQUEST": "The request is not valid.",
+      "FORBIDDEN": "You do not have permission for this action.",
+      "NOT_FOUND": "The data was not found.",
+      "INVALID_TRANSITION": "The request status has changed. Data was reloaded.",
+      "FILE_TOO_LARGE": "The file is too large.",
+      "VALIDATION_ERROR": "Some fields are invalid.",
+      "INTERNAL_ERROR": "A server error occurred."
+    }
   },
   "auth": {
     "loginTitle": "Sign in to SIPEDIS",
     "loginSubtitle": "BAPPEDA Official Travel Management System",
     "email": "Email",
-    "emailPlaceholder": "name@bappeda.go.id",
+    "emailPlaceholder": "name{'@'}bappeda.go.id",
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
     "signInButton": "Sign in",
@@ -100,5 +125,133 @@
     "message": "Are you sure?",
     "confirmLabel": "Confirm",
     "cancelLabel": "Cancel"
+  },
+  "steps": {
+    "stepOf": "Step {current} of {total}"
+  },
+  "toast": {
+    "dismiss": "Dismiss notification"
+  },
+  "settings": {
+    "language": "Language",
+    "languageHint": "Display language of the application.",
+    "id": "Bahasa Indonesia",
+    "en": "English"
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {name}",
+    "subtitle": "A summary of your official travel.",
+    "activeTrips": "Active Trips",
+    "activeTripsHint": "Approved and not yet finished",
+    "pendingApprovals": "Pending Approvals",
+    "pendingHintEmployee": "Your requests awaiting approval",
+    "pendingHintApprover": "Queue across all employees",
+    "budgetUsed": "Budget Used (YTD)",
+    "budgetUsedHint": "of {amount} allocation",
+    "upcomingTrips": "Upcoming Trips",
+    "noUpcomingTitle": "No upcoming trips",
+    "noUpcomingDescription": "Create a new travel request to get started.",
+    "cols": {
+      "trip": "Trip",
+      "dates": "Dates",
+      "status": "Status"
+    },
+    "quick": {
+      "title": "Quick Actions",
+      "newRequest": "New Request",
+      "submitReport": "Submit Report",
+      "viewPolicies": "View Policies"
+    },
+    "budget": {
+      "title": "Annual Budget",
+      "used": "Used",
+      "remaining": "Remaining",
+      "percent": "{percent}% of annual allocation"
+    }
+  },
+  "requests": {
+    "subtitle": "All of your official travel requests.",
+    "filterStatus": "Status",
+    "cols": {
+      "sppd": "SPPD No.",
+      "destination": "Destination",
+      "dates": "Dates",
+      "estimate": "Estimated Cost",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "emptyTitle": "No requests yet",
+    "emptyDescription": "Requests you create will appear here.",
+    "notEstimated": "Not calculated",
+    "detail": {
+      "title": "Request Details",
+      "sppd": "SPPD No.",
+      "employee": "Employee",
+      "destination": "Destination",
+      "dates": "Travel dates",
+      "days": "{count} days",
+      "purpose": "Purpose of travel",
+      "transport": "Transportation",
+      "estimate": "Estimated cost",
+      "documents": "Supporting documents",
+      "noDocuments": "No documents yet.",
+      "submittedAt": "Submitted on"
+    }
+  },
+  "form": {
+    "steps": {
+      "trip": "Trip Details",
+      "policy": "Policy Check",
+      "documents": "Documents"
+    },
+    "destination": "Destination",
+    "destinationPlaceholder": "e.g. Jakarta, DKI Jakarta",
+    "departDate": "Departure Date",
+    "returnDate": "Return Date",
+    "purpose": "Purpose of Travel",
+    "purposePlaceholder": "Describe the purpose of the official trip",
+    "transport": "Main Transportation",
+    "saved": "Draft saved.",
+    "submitted": "Request submitted successfully.",
+    "cannotEdit": "This request can no longer be edited.",
+    "backToList": "Back to requests"
+  },
+  "policy": {
+    "title": "Travel Policy Check",
+    "subtitle": "Allowances are calculated automatically from rank, destination, and trip length.",
+    "checking": "Calculating allowance…",
+    "days": "Trip length",
+    "daysValue": "{days} days ({nights} nights)",
+    "zone": "Destination zone",
+    "zones": {
+      "IN_PROVINCE": "In province",
+      "OUT_PROVINCE": "Out of province"
+    },
+    "rank": "Rank",
+    "dailyRate": "Daily allowance",
+    "lodgingCap": "Lodging cap per night",
+    "breakdown": "Estimated cost breakdown",
+    "allowance": "Daily allowance",
+    "lodging": "Lodging",
+    "transport": "Transportation",
+    "total": "Total estimate",
+    "compliant": "Compliant with policy",
+    "nonCompliant": "Not compliant with policy",
+    "issues": {
+      "TRIP_TOO_LONG": "Trip length exceeds the {max}-day limit.",
+      "NO_POLICY_FOR_RANK": "There is no active policy for rank {rank}."
+    },
+    "warnings": {
+      "DESTINATION_NOT_IN_CATALOG": "Destination is not in the catalog; the out-of-province rate was used."
+    },
+    "submitBlocked": "This request cannot be submitted because it does not comply with policy."
+  },
+  "documents": {
+    "title": "Supporting Documents",
+    "hint": "Upload at least one document, such as an assignment letter or invitation.",
+    "uploading": "Uploading…",
+    "empty": "No documents uploaded yet.",
+    "failed": "Upload failed",
+    "required": "At least one supporting document is required."
   }
 }

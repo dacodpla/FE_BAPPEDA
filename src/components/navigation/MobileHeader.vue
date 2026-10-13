@@ -37,7 +37,11 @@ const titleKey = computed(() => route.meta?.titleKey || 'app.name')
   top: 0;
   z-index: 20;
 }
-.brand { display: flex; align-items: center; gap: var(--space-3); }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
 .brand-mark {
   width: 32px;
   height: 32px;
@@ -50,9 +54,20 @@ const titleKey = computed(() => route.meta?.titleKey || 'app.name')
   font-weight: var(--font-weight-bold);
   font-size: var(--text-small);
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-size: var(--text-label); color: var(--color-text-muted); text-transform: uppercase; }
-.page-title { font-size: var(--text-card-title); font-weight: var(--font-weight-semibold); }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.brand-name {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+.page-title {
+  font-size: var(--text-card-title);
+  font-weight: var(--font-weight-semibold);
+}
 .icon-btn {
   width: 36px;
   height: 36px;

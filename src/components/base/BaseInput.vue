@@ -39,7 +39,9 @@ defineEmits(['update:modelValue'])
   border: 1px solid var(--color-border);
   border-radius: var(--radius-input);
   font-size: var(--text-body);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 .base-input::placeholder {
   color: var(--color-text-muted);

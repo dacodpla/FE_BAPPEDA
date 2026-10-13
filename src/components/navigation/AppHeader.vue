@@ -26,7 +26,7 @@ void props
         v-if="showMenuToggle"
         type="button"
         class="icon-btn"
-        :aria-label="t('common.search')"
+        :aria-label="t('nav.openMenu')"
         @click="$emit('toggle-menu')"
       >
         <Menu :size="18" aria-hidden="true" />
@@ -62,14 +62,24 @@ void props
   top: 0;
   z-index: 20;
 }
-.left { display: flex; align-items: center; gap: var(--space-3); }
-.right { display: flex; align-items: center; gap: var(--space-3); }
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
 .title {
   font-size: var(--text-section-title);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-primary);
 }
-.title:focus-visible { outline: none; }
+.title:focus-visible {
+  outline: none;
+}
 .icon-btn {
   width: 36px;
   height: 36px;
@@ -82,7 +92,10 @@ void props
   background: transparent;
   border: none;
 }
-.icon-btn:hover { background-color: var(--color-surface-alt); color: var(--color-text-primary); }
+.icon-btn:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-primary);
+}
 .user {
   display: flex;
   align-items: center;
@@ -94,9 +107,18 @@ void props
   font-size: var(--text-small);
   font-weight: var(--font-weight-medium);
 }
-.user-name { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.user-name {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media (max-width: 767px) {
-  .app-header { padding: 0 var(--space-4); }
-  .user-name { display: none; }
+  .app-header {
+    padding: 0 var(--space-4);
+  }
+  .user-name {
+    display: none;
+  }
 }
 </style>

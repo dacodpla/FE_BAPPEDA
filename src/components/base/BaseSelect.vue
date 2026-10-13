@@ -43,10 +43,15 @@ defineEmits(['update:modelValue'])
   border-radius: var(--radius-input);
   font-size: var(--text-body);
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, var(--color-text-secondary) 50%),
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-text-secondary) 50%),
     linear-gradient(135deg, var(--color-text-secondary) 50%, transparent 50%);
-  background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
-  background-size: 5px 5px, 5px 5px;
+  background-position:
+    calc(100% - 16px) 50%,
+    calc(100% - 11px) 50%;
+  background-size:
+    5px 5px,
+    5px 5px;
   background-repeat: no-repeat;
   cursor: pointer;
 }

@@ -32,10 +32,18 @@ defineProps({
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
-.p-none { padding: 0; }
-.p-sm { padding: var(--space-4); }
-.p-md { padding: var(--space-5); }
-.p-lg { padding: var(--space-6); }
+.p-none {
+  padding: 0;
+}
+.p-sm {
+  padding: var(--space-4);
+}
+.p-md {
+  padding: var(--space-5);
+}
+.p-lg {
+  padding: var(--space-6);
+}
 
 .card-header {
   margin-bottom: var(--space-4);
